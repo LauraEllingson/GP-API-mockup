@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Refactor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism-okaidia.min.css"
+        integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --primary-color: hsl(187, 67%, 69%);
+            --text: #413838;
+            --button-bg: rgb(41, 215, 231);
+            --button-border: hsl(185, 86%, 33%);
+        }
+
+        body {
+            max-width: 800px;
+            margin: auto;
+            background-color: var(--primary-color);
+            color: var(--text);
+            font-size: 1.2rem;
+            line-height: 1.5;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+            margin: 48px 0;
+            letter-spacing: 1.5px;
+        }
+
+        p {
+            margin: 48px 0;
+        }
+
+        button {
+            padding: 10px 24px;
+            background-color: rgb(46, 128, 87);
+            border: solid 2px var(--button-border);
+            border-radius: 4px;
+            color: var(--text);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 200ms;
+        }
+
+        button:hover {
+            background-color: var(--button-border);
+        }
+
+        span.mono {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        a {
+            color: hsl(15, 72%, 75%);
+        }
+
+        a:visited {
+            color: hsl(15, 72%, 70%);
+        }
+
+        ul>li,
+        ol>li {
+            line-height: 2;
+        }
+
+        #weather,
+        #weather-app {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        #weather-app p,
+        #weather-app h2 {
+            margin: 0;
+        }
+
+        #weather-app a,
+         a {
+            font-size: 0.8rem;
+        }
+
+        #weather-app form{
+            position: relative;
+            display: flex;
+            flex-grow: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #weather-app label {
+            pointer-events: none;
+            font-size: 1rem;
+            font-family: sans-serif;
+            position: absolute;
+            top: 10px;
+            width: 100px;
+            left: 20%;
+            color: black;
+            transition: 100ms ease-out;
+        }
+
+        #weather-app input {
+            font-size: 1rem;
+            padding: 10px;
+        }
+
+        #weather-app input:focus~label,
+        #weather-app input:not(:placeholder-shown)~label
+         {
+            top: -24px;
+            color: var(--text-light);
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1> Weather and Allergy Report </h1>
+
+    <div id="weather-app">
+        <section id="weather"></section>
+        <form>
+            <input name="search" id="weather-search" type="text" placeholder=" " />
+            <label for="weather-search">
+                Enter location
+            </label>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <h2></h2>
+    <h3></h3>
+ </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"
+        integrity="sha512-/Swpp6aCQ0smuZ+zpklJqMClcUlvxhpLf9aAcM7JjJrj2waCU4dikm3biOtMVAflOOeniW9qzaNXNrbOAOWFCw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
